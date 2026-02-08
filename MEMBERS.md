@@ -1,18 +1,17 @@
 # Members
 
-| Name | Email | LinkedIn |
-|------|-------|----------|
-| John Doe | john.doe@example.com | [linkedin.com/in/johndoe](https://linkedin.com/in/johndoe) |
-| Jane Smith | jane.smith@example.com | [linkedin.com/in/janesmith](https://linkedin.com/in/janesmith) |
-| Krishin Parikh | kvp20@case.edu | [linkedin.com/in/krishinparikh](https://www.linkedin.com/in/krishin-parikh/) |
-| Amirali Rezaei | amirali.rezaei.r@gmail.com | [linkedin.com/in/amiralirezaei](https://linkedin.com/in/amiralirezaei/) |
-
-
-| Kaleb Kim | mail@kalebkim.com | [linkedin.com/in/kaleb-k](https://www.linkedin.com/in/kaleb-k/) |
-| Name                | Email                  | LinkedIn                                                            |
-| ------------------- | ---------------------- | ------------------------------------------------------------------- |
-| John Doe            | john.doe@example.com   | [linkedin.com/in/johndoe](https://linkedin.com/in/johndoe)          |
-| Jane Smith          | jane.smith@example.com | [linkedin.com/in/janesmith](https://linkedin.com/in/janesmith)      |
+| Name                | Email                      | LinkedIn                                                                     |
+| ------------------- | -------------------------- | ---------------------------------------------------------------------------- |
+| Krishin Parikh      | kvp20@case.edu             | [linkedin.com/in/krishinparikh](https://www.linkedin.com/in/krishin-parikh/) |
+| Amirali Rezaei      | amirali.rezaei.r@gmail.com | [linkedin.com/in/amiralirezaei](https://linkedin.com/in/amiralirezaei/)      |
+| Kaleb Kim           | mail@kalebkim.com          | [linkedin.com/in/kaleb-k](https://www.linkedin.com/in/kaleb-k/)              |
+| Alexander Meylikhov | aem0000001@gmail.com       | [linkedin.com/in/meylikhov](https://www.linkedin.com/in/meylikhov/)          |
+| Ana Izma            | anaizma16@gmail.com        | [linkedin.com/in/anaizma](https://www.linkedin.com/in/anaizma/)              |
+| Chikaosolu Nnadozie | chikaosro@gmail.com        | [linkedin.com/in/chikaosolu-nnadozie](https://www.linkedin.com/in/chikaosolu-nnadozie-798424279/)                             |
+| Sreemanth M         | skm164@case.edu            |                                                                              |
+| Sri Immani          | sxi219@case.edu            | [immanisrisatyasai.com](immanisrisatyasai.com)                               |
 | Alexander Meylikhov | aem0000001@gmail.com   | [linkedin.com/in/meylikhov](https://www.linkedin.com/in/meylikhov/) |
-| Chikaosolu Nnadozie | chikaosro@gmail.com | [linkedin.com/in/chikaosolu-nnadozie-798424279/] |
+| Tedros Hemberger | tdh56@case.edu | [https://www.linkedin.com/in/tedroshemberger](https://www.linkedin.com/in/tedros-hemberger-679a59323/) |
+| Jack Millman | jlewmill@gmail.com | [linkedin.com/in/jackmillman](https://www.linkedin.com/in/jackmillman)|
 | Calvin Gelle | ceg123@case.edu | https://www.linkedin.com/in/calvin-gelle-240ab6325 | 
+| Chikaosolu Nnadozie | chikaosro@gmail.com | [linkedin.com/in/chikaosolu-nnadozie-798424279/] |
