@@ -13,3 +13,5 @@
 | Alexander Meylikhov | aem0000001@gmail.com   | [linkedin.com/in/meylikhov](https://www.linkedin.com/in/meylikhov/) |
 | Tedros Hemberger | tdh56@case.edu | [https://www.linkedin.com/in/tedroshemberger](https://www.linkedin.com/in/tedros-hemberger-679a59323/) |
 | Jack Millman | jlewmill@gmail.com | [linkedin.com/in/jackmillman](https://www.linkedin.com/in/jackmillman)|
+| Calvin Gelle | ceg123@case.edu | https://www.linkedin.com/in/calvin-gelle-240ab6325 | 
+| Chikaosolu Nnadozie | chikaosro@gmail.com | [linkedin.com/in/chikaosolu-nnadozie-798424279/] |
