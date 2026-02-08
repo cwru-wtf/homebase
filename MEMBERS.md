@@ -7,6 +7,8 @@
 | Kaleb Kim           | mail@kalebkim.com          | [linkedin.com/in/kaleb-k](https://www.linkedin.com/in/kaleb-k/)              |
 | Alexander Meylikhov | aem0000001@gmail.com       | [linkedin.com/in/meylikhov](https://www.linkedin.com/in/meylikhov/)          |
 | Ana Izma            | anaizma16@gmail.com        | [linkedin.com/in/anaizma](https://www.linkedin.com/in/anaizma/)              |
-| Chikaosolu Nnadozie | chikaosro@gmail.com        | [linkedin.com/in/chikaosolu-nnadozie-798424279/]                             |
+| Chikaosolu Nnadozie | chikaosro@gmail.com        | [linkedin.com/in/chikaosolu-nnadozie](https://www.linkedin.com/in/chikaosolu-nnadozie-798424279/)                             |
 | Sreemanth M         | skm164@case.edu            |                                                                              |
 | Sri Immani          | sxi219@case.edu            | [immanisrisatyasai.com](immanisrisatyasai.com)                               |
+| Alexander Meylikhov | aem0000001@gmail.com   | [linkedin.com/in/meylikhov](https://www.linkedin.com/in/meylikhov/) |
+| Tedros Hemberger | tdh56@case.edu | [https://www.linkedin.com/in/tedroshemberger](https://www.linkedin.com/in/tedros-hemberger-679a59323/) |
