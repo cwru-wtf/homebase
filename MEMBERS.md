@@ -16,3 +16,5 @@
 | Calvin Gelle        | ceg123@case.edu            | [linkedin.com/in/calvin-gelle](https://www.linkedin.com/in/calvin-gelle-240ab6325)                |
 | Chikaosolu Nnadozie | chikaosro@gmail.com        | [linkedin.com/in/chikaosolu-nnadozie](https://www.linkedin.com/in/chikaosolu-nnadozie-798424279/) |
 | Darin Hall          | dah181@case.edu     | [linkedin.com/in/darinhall27](https://www.linkedin.com/in/darinhall27/)                           |
+
+
