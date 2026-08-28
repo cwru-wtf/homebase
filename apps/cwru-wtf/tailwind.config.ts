@@ -19,9 +19,33 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
-        serif: ["var(--font-serif)", "Georgia", "serif"],
-        mono: ["var(--font-mono)", "monospace"],
+        brand: ["var(--font-brand)", "ui-rounded", "ui-sans-serif", "system-ui", "sans-serif"],
+        primary: ["var(--font-primary)", "ui-sans-serif", "system-ui", "sans-serif"],
+        sans: ["var(--font-primary)", "ui-sans-serif", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "Consolas", "monospace"],
+      },
+      fontSize: {
+        display: [
+          "clamp(2.75rem, 7vw, 4.5rem)",
+          { lineHeight: "1.05", letterSpacing: "-0.035em", fontWeight: "600" },
+        ],
+        "page-title": [
+          "clamp(2rem, 4vw, 3rem)",
+          { lineHeight: "1.1", letterSpacing: "-0.025em", fontWeight: "600" },
+        ],
+        "section-title": [
+          "1.25rem",
+          { lineHeight: "1.3", letterSpacing: "-0.015em", fontWeight: "600" },
+        ],
+        body: ["1rem", { lineHeight: "1.6", fontWeight: "400" }],
+        "body-sm": ["0.875rem", { lineHeight: "1.5", fontWeight: "400" }],
+        caption: [
+          "0.8125rem",
+          { lineHeight: "1.4", letterSpacing: "0.01em", fontWeight: "500" },
+        ],
+      },
+      maxWidth: {
+        content: "680px",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -57,17 +81,9 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        green: {
-          400: "#16a34a",
-          500: "#15803d",
-          600: "#166534",
-        },
-        pink: {
-          500: "#db2777",
-        },
-        yellow: {
-          500: "#ca8a04",
-        },
+        edge: "hsl(var(--edge))",
+        link: "hsl(var(--link))",
+        success: "hsl(var(--success))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -83,10 +99,20 @@ const config: Config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "fade-in": {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
+        "fade-in-up": {
+          from: { opacity: "0", transform: "translateY(12px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fade-in 0.6s ease-out both",
+        "fade-in-up": "fade-in-up 0.6s ease-out both",
       },
     },
   },

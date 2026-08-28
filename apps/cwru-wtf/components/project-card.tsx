@@ -73,7 +73,7 @@ export default function ProjectCard({ title, description, tags, image, link, sta
 
       {/* Content */}
       <div className="flex flex-col flex-1 p-5 gap-2">
-        <h3 className="font-serif text-lg font-bold text-foreground leading-snug">
+        <h3 className="font-brand text-lg font-bold text-foreground leading-snug">
           {title}
         </h3>
         <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3 flex-1">

@@ -20,8 +20,8 @@ export default function PhoneInput({ value, onChange, placeholder, className }: 
       placeholder={placeholder || "Phone number"}
       style={
         {
-          "--react-international-phone-height": "40px",
-          "--react-international-phone-border-radius": "6px",
+          "--react-international-phone-height": "44px",
+          "--react-international-phone-border-radius": "12px",
           "--react-international-phone-border-color": "hsl(var(--border))",
           "--react-international-phone-background-color": "hsl(var(--background))",
           "--react-international-phone-text-color": "hsl(var(--foreground))",
@@ -33,11 +33,11 @@ export default function PhoneInput({ value, onChange, placeholder, className }: 
         } as React.CSSProperties
       }
       className={className}
-      inputClassName="!w-full !rounded-r-md !border !border-border !bg-background !px-3 !py-2 !text-foreground focus:!border-foreground focus:!outline-none !text-sm"
+      inputClassName="!w-full !rounded-r-xl !border !border-border !bg-background !px-3 !py-2 !text-foreground focus:!border-foreground focus:!outline-none !text-sm"
       countrySelectorStyleProps={{
-        buttonClassName: "!rounded-l-md !border !border-border !bg-background !px-2 hover:!bg-accent !h-full",
+        buttonClassName: "!rounded-l-xl !border !border-border !bg-background !px-2 hover:!bg-accent !h-full",
         dropdownStyleProps: {
-          className: "!z-50 !border !border-border !rounded-md !shadow-lg !bg-background",
+          className: "!z-50 !border !border-border !rounded-xl !shadow-lg !bg-background",
           listItemClassName: "!text-foreground hover:!bg-accent !text-sm",
         },
       }}

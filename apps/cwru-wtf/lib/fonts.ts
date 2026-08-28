@@ -1,24 +1,21 @@
-import {
-  Space_Mono,
-  Nunito,
-  Literata,
-  Instrument_Serif, 
-  Instrument_Sans
-} from "next/font/google"
+import { Nunito, Inter, Geist_Mono } from "next/font/google"
 
-export const fontMono = Space_Mono({
+export const fontBrand = Nunito({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: "variable",
+  style: ["normal", "italic"],
+  display: "swap",
+  variable: "--font-brand",
+})
+
+export const fontPrimary = Inter({
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  variable: "--font-primary",
+})
+
+export const fontMono = Geist_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
   variable: "--font-mono",
-})
-
-export const fontSans = Instrument_Sans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-})
-
-export const fontSerif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: ["400", "400"],
-  variable: "--font-serif",
 })

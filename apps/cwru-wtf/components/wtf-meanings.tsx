@@ -22,26 +22,19 @@ export default function WtfMeanings() {
   }, [])
 
   return (
-    <div className="mx-auto mt-12 max-w-lg text-center">
-      <h3 className="font-mono text-xl font-bold">WTF means:</h3>
-      <div className="relative h-12 overflow-hidden">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentIndex}
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -20, opacity: 0 }}
-            transition={{ duration: 0.5 }}
-            className="absolute inset-0 flex items-center justify-center"
-          >
-            <p className="text-2xl font-bold">
-              <span className="text-green-500">{meanings[currentIndex].split(" ")[0]}</span>{" "}
-              <span className="text-pink-500">{meanings[currentIndex].split(" ")[1]}</span>{" "}
-              <span className="text-yellow-500">{meanings[currentIndex].split(" ")[2]}</span>
-            </p>
-          </motion.div>
-        </AnimatePresence>
-      </div>
+    <div className="mt-5 flex h-7 items-center justify-center overflow-hidden">
+      <AnimatePresence mode="wait">
+        <motion.p
+          key={currentIndex}
+          initial={{ y: 12, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: -12, opacity: 0 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="font-mono text-caption uppercase tracking-[0.2em] text-muted-foreground"
+        >
+          {meanings[currentIndex]}
+        </motion.p>
+      </AnimatePresence>
     </div>
   )
 }
