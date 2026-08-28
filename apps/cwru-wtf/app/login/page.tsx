@@ -65,7 +65,7 @@ export default function LoginPage() {
               Private Admin Portal
             </div>
 
-            <h1 className="mt-5 max-w-2xl font-serif text-4xl leading-tight text-white sm:text-5xl">
+            <h1 className="mt-5 max-w-2xl font-brand text-4xl leading-tight text-white sm:text-5xl">
               Minimal, premium access for the team behind CWRU.WTF.
             </h1>
 

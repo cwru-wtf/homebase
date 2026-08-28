@@ -1,138 +1,117 @@
 import Link from "next/link"
-import Image from "next/image"
-import { ArrowRight, Rocket, Zap, Wrench } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { ArrowRight } from "lucide-react"
 import WtfMeanings from "@/components/wtf-meanings"
 import SubmissionForm from "@/components/submission-form"
-import GlitchyWtfText from "@/components/glitchy-wtf-text"
+
+const principles = [
+  {
+    title: "Build anything",
+    body: "Hardware hacks, AI experiments, large-scale art, films, open-source tools, weird websites, games. Anything goes.",
+  },
+  {
+    title: "Learn by doing",
+    body: "No experience required. Just curiosity and a willingness to build. We learn through projects, not lectures.",
+  },
+  {
+    title: "Ship it",
+    body: "Late-night build sessions, mentorship between members, and projects that actually make it out the door.",
+  },
+]
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="/bgbg.jpg"
-            alt=""
-            fill
-            className="object-cover object-center blur-sm scale-105"
-            priority
-          />
-        </div>
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center space-y-8">
-<h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05]">
-              <span className="text-green-400">cwru</span>
-              <span className="text-pink-400">.wtf</span>
-            </h1>
-            <GlitchyWtfText />
-            <p className="font-sans text-xl leading-7 text-white/80 max-w-xl mx-auto">
-              A student-led collective for builders, tinkerers, and dreamers at Case Western Reserve University.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center pt-2">
-              <Button className="rounded-full bg-black text-white hover:bg-black/80 px-8 py-3 font-mono text-sm" asChild>
-                <Link href="#join">
-                  Join .wtf <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button className="rounded-full bg-white text-black hover:bg-white/90 px-8 py-3 font-mono text-sm" asChild>
-                <Link href="#about">
-                  Learn More
-                </Link>
-              </Button>
-            </div>
-          </div>
+    <div className="mx-auto w-full max-w-[1160px] px-6">
+      {/* Hero */}
+      <section className="flex min-h-[100svh] flex-col items-center justify-center py-20 text-center">
+        <h1 className="animate-fade-in-up font-brand text-display text-foreground">
+          cwru<span className="text-muted-foreground">.wtf</span>
+        </h1>
+
+        <WtfMeanings />
+
+        <p className="mt-6 max-w-[46ch] text-pretty font-primary text-body text-muted-foreground md:text-lg">
+          A student-led collective for{" "}
+          <span className="wavy text-foreground">builders</span>,{" "}
+          <span className="wavy text-foreground">tinkerers</span>, and{" "}
+          <span className="wavy text-foreground">dreamers</span> at Case Western
+          Reserve University.
+        </p>
+
+        <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
+          <Link
+            href="#join"
+            className="focus-ring inline-flex h-12 items-center justify-center rounded-xl bg-primary px-5 text-base font-medium text-primary-foreground transition-[transform,background-color] hover:bg-primary/90 active:scale-[0.98]"
+          >
+            Join .wtf
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+          <Link
+            href="#about"
+            className="focus-ring inline-flex h-12 items-center justify-center rounded-xl border border-border px-5 text-base font-medium text-foreground transition-colors hover:bg-muted"
+          >
+            What is this?
+          </Link>
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-20 md:py-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="font-mono text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground mb-4">
-              What We Do
-            </p>
-            <h2 className="font-serif text-3xl md:text-5xl font-bold tracking-tight leading-tight mb-6">
-              What is cwru.wtf?
-            </h2>
-            <p className="font-sans text-xl leading-7 text-muted-foreground max-w-2xl">
-              This isn&apos;t a club where we talk about doing things (we are in fact not a club!).
-              It&apos;s where we actually do them. Hardware hacks, AI experiments, art installations,
-              films, open-source tools, weird websites&mdash;anything that makes you say &ldquo;wtf, I wanna try that.&rdquo;
-            </p>
-          </div>
+      {/* About */}
+      <section
+        id="about"
+        className="screen-line-before screen-line-after py-20 md:py-28"
+      >
+        <p className="font-mono text-caption uppercase tracking-[0.2em] text-muted-foreground">
+          What we do
+        </p>
+        <h2 className="mt-4 max-w-content font-brand text-page-title text-foreground">
+          Not a club. A workshop.
+        </h2>
+        <p className="mt-5 max-w-content text-pretty font-primary text-body text-muted-foreground md:text-lg">
+          This isn&apos;t a place where we talk about doing things. It&apos;s
+          where we actually do them &mdash; hardware hacks, AI experiments, art
+          installations, films, open-source tools, weird websites. Anything that
+          makes you say &ldquo;wtf, I wanna try that.&rdquo;
+        </p>
 
-          <WtfMeanings />
-
-          <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="space-y-4">
-              <Zap className="h-6 w-6 text-green-500" />
-              <h3 className="font-serif text-xl font-bold">Build Anything</h3>
-              <p className="font-sans text-xl leading-7 text-muted-foreground">
-                Hardware hacks, AI experiments, large scale art, films, open-source tools, weird websites, game dev&mdash;anything goes.
+        <ul className="mt-14 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-3">
+          {principles.map((item) => (
+            <li key={item.title} className="bg-background p-6">
+              <h3 className="font-brand text-section-title text-foreground">
+                {item.title}
+              </h3>
+              <p className="mt-2 font-primary text-body-sm text-muted-foreground">
+                {item.body}
               </p>
-            </div>
-            <div className="space-y-4">
-              <Wrench className="h-6 w-6 text-pink-500" />
-              <h3 className="font-serif text-xl font-bold">Learn by Doing</h3>
-              <p className="font-sans text-xl leading-7 text-muted-foreground">
-                No experience required. Just curiosity and a willingness to build. We learn through projects, not lectures.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <Rocket className="h-6 w-6 text-yellow-500" />
-              <h3 className="font-serif text-xl font-bold">Ship It</h3>
-              <p className="font-sans text-xl leading-7 text-muted-foreground">
-                We host late-night build sessions, mentor each other, and collaborate on projects that make us excited.
-              </p>
-            </div>
-          </div>
-        </div>
+            </li>
+          ))}
+        </ul>
       </section>
 
-      {/* Divider */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <hr className="border-border" />
-      </div>
-
-      {/* Join Section */}
-      <section id="join" className="py-20 md:py-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-md mx-auto text-center">
-            <p className="font-mono text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground mb-4">
-              Join Us
-            </p>
-            <h2 className="font-serif text-3xl md:text-5xl font-bold tracking-tight leading-tight">
-              Join cwru.wtf
-            </h2>
-            <p className="mt-4 font-sans text-xl leading-7 text-muted-foreground">
-              Ready to build something awesome? Join our community of makers, hackers, and creators.
-            </p>
-          </div>
-
-          <SubmissionForm />
+      {/* Join */}
+      <section id="join" className="screen-line-after py-20 md:py-28">
+        <div className="mx-auto max-w-content text-center">
+          <p className="font-mono text-caption uppercase tracking-[0.2em] text-muted-foreground">
+            Join us
+          </p>
+          <h2 className="mt-4 font-brand text-page-title text-foreground">
+            Come build something
+          </h2>
+          <p className="mt-5 text-pretty font-primary text-body text-muted-foreground md:text-lg">
+            Tell us what you&apos;re into and what you want to make. We read
+            every submission.
+          </p>
         </div>
+
+        <SubmissionForm />
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border py-12">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center justify-between space-y-6 sm:flex-row sm:space-y-0">
-            <div className="flex items-center space-x-4">
-              <span className="font-mono text-xl font-bold">
-                <span className="text-green-500">cwru</span>
-                <span className="text-pink-500">.wtf</span>
-              </span>
-            </div>
-          </div>
-          <div className="mt-8 border-t border-border pt-8 text-center">
-            <p className="text-sm text-muted-foreground">
-              &copy; {new Date().getFullYear()} cwru.wtf
-            </p>
-          </div>
-        </div>
+      <footer className="flex flex-col items-center gap-3 py-10 sm:flex-row sm:justify-between">
+        <span className="font-brand text-base font-semibold text-foreground">
+          cwru<span className="text-muted-foreground">.wtf</span>
+        </span>
+        <span className="font-mono text-caption text-muted-foreground">
+          &copy; {new Date().getFullYear()} &mdash; We Tinker Fearlessly
+        </span>
       </footer>
     </div>
   )

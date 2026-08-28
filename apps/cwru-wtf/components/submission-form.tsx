@@ -143,7 +143,7 @@ export default function SubmissionForm() {
   ];
 
   return (
-    <form className="mx-auto mt-8 max-w-md" onSubmit={handleSubmit(onSubmit)}>
+    <form className="mx-auto mt-12 max-w-md" onSubmit={handleSubmit(onSubmit)}>
       <div className="grid gap-6">
         <div>
           <label htmlFor="name" className="sr-only">
@@ -154,10 +154,10 @@ export default function SubmissionForm() {
             type="text"
             id="name"
             placeholder="Your Name"
-            className="w-full rounded-md border border-border bg-background px-4 py-2 text-foreground focus:border-foreground focus:outline-none"
+            className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:border-foreground focus:outline-none"
           />
           {errors.name && (
-            <p className="mt-1 text-sm text-red-400">{errors.name.message}</p>
+            <p className="mt-1.5 text-body-sm text-destructive">{errors.name.message}</p>
           )}
         </div>
 
@@ -170,10 +170,10 @@ export default function SubmissionForm() {
             type="email"
             id="email"
             placeholder="Your Email (@case.edu)"
-            className="w-full rounded-md border border-border bg-background px-4 py-2 text-foreground focus:border-foreground focus:outline-none"
+            className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:border-foreground focus:outline-none"
           />
           {errors.email && (
-            <p className="mt-1 text-sm text-red-400">{errors.email.message}</p>
+            <p className="mt-1.5 text-body-sm text-destructive">{errors.email.message}</p>
           )}
         </div>
 
@@ -186,8 +186,9 @@ export default function SubmissionForm() {
             }}
             placeholder="WhatsApp number (optional)"
           />
-          <p className="mt-1.5 text-xs text-muted-foreground flex items-center gap-1">
-            <span>💬</span> Our community hangs out on WhatsApp — drop your number to stay in the loop
+          <p className="mt-2 flex items-start gap-1.5 text-body-sm text-muted-foreground">
+            <span className="shrink-0 leading-5">💬</span>
+            <span>Our community hangs out on WhatsApp — drop your number to stay in the loop</span>
           </p>
         </div>
 
@@ -199,11 +200,11 @@ export default function SubmissionForm() {
             {categoryOptions.map((category) => (
               <label
                 key={category}
-                className="flex items-center cursor-pointer hover:bg-accent p-2 rounded"
+                className="flex cursor-pointer items-center rounded-lg p-2 transition-colors hover:bg-muted"
               >
                 <input
                   type="checkbox"
-                  className="w-4 h-4 text-green-500 bg-secondary border-border rounded focus:ring-foreground focus:ring-2"
+                  className="h-4 w-4 rounded border-border bg-secondary text-foreground accent-foreground focus:ring-2 focus:ring-ring"
                   checked={watchCategories?.includes(category) || false}
                   onChange={(e) =>
                     handleCategoryChange(category, e.target.checked)
@@ -214,7 +215,7 @@ export default function SubmissionForm() {
             ))}
           </div>
           {errors.categories && (
-            <p className="mt-1 text-sm text-red-400">
+            <p className="mt-1.5 text-body-sm text-destructive">
               {errors.categories.message}
             </p>
           )}
@@ -226,10 +227,10 @@ export default function SubmissionForm() {
               {...register("otherCategory")}
               type="text"
               placeholder="Please specify your other category"
-              className="w-full rounded-md border border-border bg-background px-4 py-2 text-foreground focus:border-foreground focus:outline-none"
+              className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:border-foreground focus:outline-none"
             />
             {errors.otherCategory && (
-              <p className="mt-1 text-sm text-red-400">
+              <p className="mt-1.5 text-body-sm text-destructive">
                 {errors.otherCategory.message}
               </p>
             )}
@@ -245,10 +246,10 @@ export default function SubmissionForm() {
             id="wtfIdea"
             placeholder="What do you want to build that would make you go WTF? (100 words max)"
             rows={4}
-            className="w-full rounded-md border border-border bg-background px-4 py-2 text-foreground focus:border-foreground focus:outline-none resize-vertical"
+            className="w-full resize-vertical rounded-xl border border-border bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:border-foreground focus:outline-none"
           />
           {errors.wtfIdea && (
-            <p className="mt-1 text-sm text-red-400">
+            <p className="mt-1.5 text-body-sm text-destructive">
               {errors.wtfIdea.message}
             </p>
           )}
@@ -263,10 +264,10 @@ export default function SubmissionForm() {
             id="currentProject"
             placeholder="What's something you have built or are building right now? (100 words max)"
             rows={4}
-            className="w-full rounded-md border border-border bg-background px-4 py-2 text-foreground focus:border-foreground focus:outline-none resize-vertical"
+            className="w-full resize-vertical rounded-xl border border-border bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:border-foreground focus:outline-none"
           />
           {errors.currentProject && (
-            <p className="mt-1 text-sm text-red-400">
+            <p className="mt-1.5 text-body-sm text-destructive">
               {errors.currentProject.message}
             </p>
           )}
@@ -284,10 +285,10 @@ export default function SubmissionForm() {
             type="url"
             id="youtubeLink"
             placeholder="https://..."
-            className="w-full rounded-md border border-border bg-background px-4 py-2 text-foreground focus:border-foreground focus:outline-none"
+            className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:border-foreground focus:outline-none"
           />
           {errors.youtubeLink && (
-            <p className="mt-1 text-sm text-red-400">
+            <p className="mt-1.5 text-body-sm text-destructive">
               {errors.youtubeLink.message}
             </p>
           )}
@@ -296,7 +297,7 @@ export default function SubmissionForm() {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="bg-foreground text-background hover:bg-foreground/80 disabled:opacity-50 disabled:cursor-not-allowed rounded-full"
+          className="h-12 rounded-xl bg-primary text-base font-medium text-primary-foreground transition-[transform,background-color] hover:bg-primary/90 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50"
         >
           {isSubmitting ? "Submitting..." : "Submit Application"}
         </Button>

@@ -208,7 +208,7 @@ export default function AdminDashboard({
                 Admin Console
               </div>
 
-              <h1 className="mt-5 font-serif text-4xl leading-tight text-white sm:text-5xl">
+              <h1 className="mt-5 font-brand text-4xl leading-tight text-white sm:text-5xl">
                 Review submissions with a cleaner, faster control room.
               </h1>
 
