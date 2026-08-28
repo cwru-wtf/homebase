@@ -1,6 +1,10 @@
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
+import DeskCat from "@/components/desk-cat"
+import PeekCat from "@/components/peek-cat"
+import TopCat from "@/components/top-cat"
 import WtfMeanings from "@/components/wtf-meanings"
+import Wordmark from "@/components/wordmark"
 import SubmissionForm from "@/components/submission-form"
 
 const principles = [
@@ -22,9 +26,9 @@ export default function Home() {
   return (
     <div className="mx-auto w-full max-w-[1160px] px-6">
       {/* Hero */}
-      <section className="flex min-h-[100svh] flex-col items-center justify-center py-20 text-center">
+      <section className="relative flex min-h-[100svh] flex-col items-center justify-center py-20 text-center">
         <h1 className="animate-fade-in-up font-brand text-display text-foreground">
-          cwru<span className="text-muted-foreground">.wtf</span>
+          <Wordmark />
         </h1>
 
         <WtfMeanings />
@@ -52,6 +56,13 @@ export default function Home() {
             What is this?
           </Link>
         </div>
+
+        {/* left/right-[calc(50%-50vw)] pins each drawing to the viewport edge no
+            matter how wide the centered container is, so the cats read as sitting
+            at the edges of the page rather than the content column. */}
+        <TopCat className="pointer-events-none absolute left-1/2 top-[calc(clamp(120px,min(26vh,40vw),270px)*-0.15)] h-[clamp(120px,min(26vh,40vw),270px)] w-auto -translate-x-1/2 text-foreground/80" />
+        <DeskCat className="pointer-events-none absolute bottom-[17%] left-[calc(50%-50vw)] w-[clamp(112px,15vw,220px)] text-foreground/80 md:bottom-auto md:top-[calc(50%-4rem)]" />
+        <PeekCat className="pointer-events-none absolute bottom-[9%] right-[calc(50%-50vw)] w-[clamp(84px,11vw,152px)] text-foreground/80 sm:bottom-auto sm:top-[calc(50%-8rem)]" />
       </section>
 
       {/* About */}
@@ -106,8 +117,8 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="flex flex-col items-center gap-3 py-10 sm:flex-row sm:justify-between">
-        <span className="font-brand text-base font-semibold text-foreground">
-          cwru<span className="text-muted-foreground">.wtf</span>
+        <span className="font-brand text-lg font-semibold text-foreground">
+          <Wordmark />
         </span>
         <span className="font-mono text-caption text-muted-foreground">
           &copy; {new Date().getFullYear()} &mdash; We Tinker Fearlessly
