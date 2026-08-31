@@ -7,6 +7,8 @@ import { signIn } from "next-auth/react";
 import { ArrowLeft, LoaderCircle, Lock } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import Wordmark from "@/components/wordmark";
 
 export default function LoginPage() {
@@ -106,13 +108,10 @@ export default function LoginPage() {
               ) : null}
 
               <div>
-                <label
-                  htmlFor="email"
-                  className="mb-2 block font-mono text-caption uppercase tracking-[0.14em] text-muted-foreground"
-                >
+                <Label htmlFor="email" className="mb-2">
                   Email
-                </label>
-                <input
+                </Label>
+                <Input
                   id="email"
                   name="email"
                   type="email"
@@ -126,18 +125,15 @@ export default function LoginPage() {
                   spellCheck={false}
                   required
                   placeholder="admin@cwru.wtf"
-                  className="focus-ring h-12 w-full rounded-xl border border-border bg-background px-4 text-body-sm text-foreground placeholder:text-muted-foreground focus:border-foreground"
+                  className="h-12"
                 />
               </div>
 
               <div>
-                <label
-                  htmlFor="password"
-                  className="mb-2 block font-mono text-caption uppercase tracking-[0.14em] text-muted-foreground"
-                >
+                <Label htmlFor="password" className="mb-2">
                   Password
-                </label>
-                <input
+                </Label>
+                <Input
                   id="password"
                   name="password"
                   type="password"
@@ -149,15 +145,16 @@ export default function LoginPage() {
                   autoComplete="current-password"
                   required
                   placeholder="••••••••"
-                  className="focus-ring h-12 w-full rounded-xl border border-border bg-background px-4 text-body-sm text-foreground placeholder:text-muted-foreground focus:border-foreground"
+                  className="h-12"
                 />
               </div>
 
               <Button
                 type="submit"
+                size="xl"
                 disabled={isLoading}
                 aria-busy={isLoading}
-                className="h-12 w-full rounded-xl bg-primary text-base text-primary-foreground transition-[transform,background-color] hover:bg-primary/90 active:scale-[0.98] disabled:cursor-not-allowed"
+                className="w-full"
               >
                 {isLoading ? (
                   <LoaderCircle

@@ -31,6 +31,7 @@ import {
 import { toast } from "sonner";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import Wordmark from "@/components/wordmark";
 import { cn } from "@/lib/utils";
 
@@ -500,7 +501,7 @@ export default function AdminDashboard({
                   aria-hidden="true"
                   className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
                 />
-                <input
+                <Input
                   id="application-search"
                   name="application-search"
                   type="search"
@@ -509,7 +510,7 @@ export default function AdminDashboard({
                   autoComplete="off"
                   spellCheck={false}
                   placeholder="Search names, emails, or ideas…"
-                  className="focus-ring h-10 w-full rounded-lg border border-border bg-background px-10 pr-11 text-body-sm text-foreground placeholder:text-muted-foreground focus:border-foreground"
+                  className="h-10 rounded-lg px-10 pr-11"
                 />
                 {search ? (
                   <button
