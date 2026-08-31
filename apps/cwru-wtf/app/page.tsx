@@ -7,20 +7,7 @@ import WtfMeanings from "@/components/wtf-meanings"
 import Wordmark from "@/components/wordmark"
 import SubmissionForm from "@/components/submission-form"
 
-const principles = [
-  {
-    title: "Build anything",
-    body: "Hardware hacks, AI experiments, large-scale art, films, open-source tools, weird websites, games. Anything goes.",
-  },
-  {
-    title: "Learn by doing",
-    body: "No experience required. Just curiosity and a willingness to build. We learn through projects, not lectures.",
-  },
-  {
-    title: "Ship it",
-    body: "Late-night build sessions, mentorship between members, and projects that actually make it out the door.",
-  },
-]
+
 
 export default function Home() {
   return (
@@ -70,31 +57,18 @@ export default function Home() {
         id="about"
         className="screen-line-before screen-line-after py-20 md:py-28"
       >
-        <p className="font-mono text-caption uppercase tracking-[0.2em] text-muted-foreground">
-          What we do
-        </p>
         <h2 className="mt-4 max-w-content font-brand text-page-title text-foreground">
-          Not a club. A workshop.
+          This is not a club!
         </h2>
-        <p className="mt-5 max-w-content text-pretty font-primary text-body text-muted-foreground md:text-lg">
+        <p className="mt-5 max---filter=!@repo/apiw-content text-pretty font-primary text-body text-muted-foreground md:text-lg">
           This isn&apos;t a place where we talk about doing things. It&apos;s
           where we actually do them &mdash; hardware hacks, AI experiments, art
           installations, films, open-source tools, weird websites. Anything that
           makes you say &ldquo;wtf, I wanna try that.&rdquo;
         </p>
 
-        <ul className="mt-14 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-3">
-          {principles.map((item) => (
-            <li key={item.title} className="bg-background p-6">
-              <h3 className="font-brand text-section-title text-foreground">
-                {item.title}
-              </h3>
-              <p className="mt-2 font-primary text-body-sm text-muted-foreground">
-                {item.body}
-              </p>
-            </li>
-          ))}
-        </ul>
+       
+      
       </section>
 
       {/* Join */}
@@ -104,7 +78,7 @@ export default function Home() {
             Join us
           </p>
           <h2 className="mt-4 font-brand text-page-title text-foreground">
-            Come build something
+            Come create something
           </h2>
           <p className="mt-5 text-pretty font-primary text-body text-muted-foreground md:text-lg">
             Tell us what you&apos;re into and what you want to make. We read
