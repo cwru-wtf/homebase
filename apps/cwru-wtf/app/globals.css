@@ -11,6 +11,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10%;
     --primary: 0 0% 10%;
+    --primary-hover: 0 0% 18%;
+    --primary-active: 0 0% 28%;
     --primary-foreground: 60 20% 98%;
     --secondary: 48 14% 93%;
     --secondary-foreground: 0 0% 10%;
@@ -37,6 +39,8 @@
     --popover: 60 2% 10%;
     --popover-foreground: 60 3% 93%;
     --primary: 60 3% 93%;
+    --primary-hover: 60 3% 86%;
+    --primary-active: 60 3% 78%;
     --primary-foreground: 60 3% 7%;
     --secondary: 60 5% 12%;
     --secondary-foreground: 60 3% 93%;
@@ -139,13 +143,15 @@
     @apply relative after:absolute after:bottom-0 after:-left-[100vw] after:-z-10 after:h-px after:w-[200vw] after:bg-edge;
   }
 
+  /* Superelliptical corners: the curvature eases into the straight edge rather
+     than meeting it at a tangent, which removes the pinch where a circular
+     corner hands off to the side. Pairs with an existing radius — it shapes
+     one, it does not create it. Browsers without `corner-shape` ignore it. */
+  .corner-squircle {
+    corner-shape: squircle;
+  }
+
   .wavy {
     @apply underline decoration-wavy decoration-[1.5px] decoration-muted-foreground underline-offset-[5px];
-  }
-}
-
-@layer components {
-  .focus-ring {
-    @apply outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background;
   }
 }

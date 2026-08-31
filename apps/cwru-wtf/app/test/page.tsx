@@ -92,13 +92,13 @@ export default async function TestPage() {
             </CardHeader>
             <CardContent>
               <div className="flex gap-4">
-                <Button asChild className="bg-green-500 text-black hover:bg-green-400">
+                <Button asChild className="border-green-500 bg-green-500 text-black hover:border-green-400 hover:bg-green-400">
                   <Link href="/">Test Submission Form</Link>
                 </Button>
-                <Button asChild variant="outline" className="border-pink-500 text-pink-500 hover:bg-pink-500/10">
+                <Button asChild variant="outline" className="bg-transparent border-pink-500 text-pink-500 hover:border-pink-400 hover:bg-pink-500/10">
                   <Link href="/login">Admin Login</Link>
                 </Button>
-                <Button asChild variant="outline" className="border-green-500 text-green-500 hover:bg-green-500/10">
+                <Button asChild variant="outline" className="bg-transparent border-green-500 text-green-500 hover:border-green-400 hover:bg-green-500/10">
                   <Link href="/admin">Admin Dashboard</Link>
                 </Button>
               </div>

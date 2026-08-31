@@ -7,6 +7,8 @@ import { signIn } from 'next-auth/react';
 import { ArrowLeft, LoaderCircle, Lock, ShieldCheck, Sparkles } from 'lucide-react';
 import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -118,47 +120,43 @@ export default function LoginPage() {
 
             <form onSubmit={handleSubmit} className="mt-8 space-y-4">
               <div>
-                <label
-                  htmlFor="email"
-                  className="mb-2 block text-sm font-medium text-slate-200"
-                >
+                <Label htmlFor="email" className="mb-2 text-slate-400">
                   Email
-                </label>
-                <input
+                </Label>
+                <Input
                   id="email"
                   type="email"
+                  tone="inverted"
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
                   autoComplete="email"
                   required
                   placeholder="admin@cwru.wtf"
-                  className="w-full rounded-[22px] border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300/40 focus:bg-white/8 focus:ring-2 focus:ring-cyan-300/20"
                 />
               </div>
 
               <div>
-                <label
-                  htmlFor="password"
-                  className="mb-2 block text-sm font-medium text-slate-200"
-                >
+                <Label htmlFor="password" className="mb-2 text-slate-400">
                   Password
-                </label>
-                <input
+                </Label>
+                <Input
                   id="password"
                   type="password"
+                  tone="inverted"
                   value={password}
                   onChange={(event) => setPassword(event.target.value)}
                   autoComplete="current-password"
                   required
                   placeholder="••••••••"
-                  className="w-full rounded-[22px] border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300/40 focus:bg-white/8 focus:ring-2 focus:ring-cyan-300/20"
                 />
               </div>
 
               <Button
                 type="submit"
+                size="xl"
+                variant="inverted"
                 disabled={isLoading}
-                className="h-12 w-full rounded-[22px] bg-cyan-300 text-slate-950 hover:bg-cyan-200 disabled:cursor-not-allowed disabled:opacity-60"
+                className="w-full border-cyan-200/30 bg-cyan-300 text-slate-950 hover:bg-cyan-200 focus-visible:border-cyan-200 focus-visible:ring-cyan-300/30"
               >
                 {isLoading ? (
                   <LoaderCircle className="h-4 w-4 animate-spin" />

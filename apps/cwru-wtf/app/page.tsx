@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import DeskCat from "@/components/desk-cat"
 import PeekCat from "@/components/peek-cat"
 import TopCat from "@/components/top-cat"
@@ -29,19 +30,15 @@ export default function Home() {
         </p>
 
         <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-          <Link
-            href="#join"
-            className="focus-ring inline-flex h-12 items-center justify-center rounded-xl bg-primary px-5 text-base font-medium text-primary-foreground transition-[transform,background-color] hover:bg-primary/90 active:scale-[0.98]"
-          >
-            Join .wtf
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
-          <Link
-            href="#about"
-            className="focus-ring inline-flex h-12 items-center justify-center rounded-xl border border-border px-5 text-base font-medium text-foreground transition-colors hover:bg-muted"
-          >
-            What is this?
-          </Link>
+          <Button asChild size="xl">
+            <Link href="#join">
+              Join .wtf
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </Button>
+          <Button asChild size="xl" variant="outline">
+            <Link href="#about">What is this?</Link>
+          </Button>
         </div>
 
         {/* left/right-[calc(50%-50vw)] pins each drawing to the viewport edge no
